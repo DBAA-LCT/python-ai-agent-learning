@@ -73,7 +73,7 @@ data_dir = Path(__file__).parent / "data"
 data_dir.mkdir(exist_ok=True)
 
 # 拼接 JSON 文件路径。
-json_path = data_dir / "07_word_frequency.json"
+json_path = data_dir / "t07_word_frequency.json"
 
 
 # 读取文本，并统计每个单词的出现次数。

@@ -29,6 +29,15 @@ from pathlib import Path
 from t10_score_utils import get_score_stats
 
 
+"""模块 16：处理 JSON 文件格式错误
+
+本次练习的需求：读取 JSON 成绩文件，区分文件不存在、JSON 格式错误和成绩数据内容无效。
+涉及的知识点：Path 文件路径、json.load()、JSONDecodeError、ValueError、列表与元素类型校验、异常捕获顺序。
+复习重点：先完成 JSON 文本解析，再校验解析结果；JSONDecodeError 必须放在 ValueError 之前；异常处理后不能继续使用无效数据。
+常见错误：把 JSON 格式错误误认为数据类型错误，或把 JSONDecodeError 放在 ValueError 之后导致分支被提前捕获。
+"""
+
+
 def main():
     data_dir = Path(__file__).parent / "data"
     data_dir.mkdir(exist_ok=True)
